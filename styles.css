@@ -27,7 +27,7 @@ html {
     align-items: center;
 }
 
-.container-fluid {
+.container {
     background-color: var(--secondary-color);
     margin: 3.5rem;
     box-shadow: 0 1rem 3rem var(--grey-color);
@@ -57,7 +57,7 @@ html {
     height: .2rem;
     width: 3.5rem;
     background-color: var(--light-grey-color);
-} 
+}
 
 .open-navbar-icon .line {
     margin: .3rem 0;
@@ -73,18 +73,22 @@ html {
     opacity: 0;
     z-index: 300;
     padding: 3.5rem 5.5rem 3.5rem 3.5rem;
+    transition: bottom .5s, opacity .2s;
 }
 
-.change .navbar-wrapper {
+.change .navbar-wrapper{
     bottom: 0;
     opacity: 1;
+    transition: bottom .5s, opacity .2s .25s;
 }
 
 .navbar {
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .3)), url(images/navbar-bg.jpg);
+    background-color: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .3)), url(images/navbar-bg.jpg) center no-repeat;
+    background-size: cover;
     position: relative;
+    overflow-y: hidden;
 }
 
 .close-navbar-icon {
@@ -131,6 +135,27 @@ html {
     opacity: 1;
     color: var(--primary-color);
 }
+
+.change .nav-link:nth-child(1) {
+    transition: top 1s .4s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(2) {
+    transition: top 1s .6s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(3) {
+    transition: top 1s .8s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(4) {
+    transition: top 1s 1s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(5) {
+    transition: top 1s 1.2s, opacity .3s, color .3s;
+}
+
 
 
 /* END OF NAVBAR */
